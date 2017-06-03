@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Светлана](https://up.htmlacademy.ru/adaptive/11/user/216789).
-* Наставник: `Неизвестно`.
+* Наставник: `Keksobot 🐣`.
 
 ---
 
