@@ -1,0 +1,32 @@
+/*--MOBILE--*/
+
+.social {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social__link {
+  display: inline-block;
+  margin-right: 40px;
+  padding: 26px 0;
+  vertical-align: bottom;
+
+  &--in {
+    width: 22px;
+    height: 22px;
+    background: url(/img/icon-insta.svg) no-repeat 50% 50%;
+  }
+
+  &--fb {
+    width: 15px;
+    height: 28px;
+    background: url(/img/icon-fb.svg) no-repeat 50% 50%;
+  }
+
+  &--tw {
+    width: 24px;
+    height: 21px;
+    margin-right: 0;
+    background: url(/img/icon-twitter.svg) no-repeat 50% 50%;
+  }
+}

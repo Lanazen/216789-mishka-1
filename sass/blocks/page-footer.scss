@@ -1,0 +1,28 @@
+/*--MOBILE--*/
+
+.page-footer {
+  margin: 0;
+  padding: 0 0 20px;
+  font-family: $font-open-sans-bold;
+  text-align: center;
+  background-color: $secondary-bg-color;
+  color: $main-text-color;
+}
+
+.page-footer__copyright {
+  margin-top: 4px;
+  padding-top: 15px;
+}
+
+.page-footer__text {
+  font-size: 19px;
+}
+
+.page-footer__link {
+  display: inline-block;
+  width: 27px;
+  height: 35px;
+  margin-left: 20px;
+  vertical-align: middle;
+  background: url(/img/logo-htmlacademy.svg) no-repeat 50% 50%;
+}
