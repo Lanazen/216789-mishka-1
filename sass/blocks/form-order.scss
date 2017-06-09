@@ -132,8 +132,8 @@
 }
 
 .form-order input[type="checkbox"]:checked + .form-order__checkbox--label::before {
-   background: url("../img/icon-yes-red.svg") no-repeat center; }
-
+   background: url("../img/icon-yes-red.svg") no-repeat center;
+ }
 
 .form-order input[type="checkbox"]:checked:disabled + label::after {
   border-right: 3px solid $disable-color;
