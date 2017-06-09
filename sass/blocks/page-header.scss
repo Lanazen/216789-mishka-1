@@ -1,0 +1,30 @@
+/*--MOBILE--*/
+
+.page-header {
+  min-width: 320px;
+  min-height: 79px;
+  font-family: $font-open-sans-bold;
+  text-align: center;
+  background-color: $main-bg-color;
+}
+
+.page-header__logo {
+  display: block;
+  min-height: 35px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+  /*.page-header__logo img {
+    padding: 0;
+  }*/

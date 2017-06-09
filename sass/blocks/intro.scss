@@ -1,0 +1,19 @@
+/*--MOBILE--*/
+
+.intro {
+  margin: 0;
+  padding: 51px 30px 58px;
+  background-color: $secondary-bg-color;
+  color: $main-text-color;
+
+  &--index {
+    min-height: 355px;
+    background: url(/img/hero-mobile@1x.jpg) no-repeat 50% -20%;
+  }
+}
+
+.intro__header {
+  font-family: $font-open-sans-bold;
+  font-size: 27px;
+  line-height: 30px;
+}

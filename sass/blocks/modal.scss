@@ -1,0 +1,91 @@
+/*--MOBILE--*/
+
+.modal {
+  display: block;
+  max-width: 320px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -818px;
+  z-index: 15;
+  text-align: center;
+  background: $main-bg-color;
+  box-shadow: 0 5px 10px #c7c7c7;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal__order {
+  padding: 30px 30px 45px;
+  border: 1px solid #c7c7c7;
+}
+
+.modal__title {
+  font-family: $font-open-sans-bold;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.modal__list {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.modal__select {
+  display: block;
+  margin-top: 20px;
+  font-family: $font-open-sans;
+  font-size: 15px;
+  line-height: 15px;
+  color: $secondary-text-color;
+}
+
+.modal__item {
+  display: inline-block;
+  width: 77px;
+  margin-top: 31px;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.modal__item:last-child {
+  margin-right: 0;
+}
+
+.modal__item input {
+  display: none;
+}
+
+.modal__label {
+  display: block;
+  padding: 13px 0;
+  font-family: $font-open-sans-bold;
+  font-size: 17px;
+  border: 2px solid $border-color;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid #c7c7c7;
+  }
+
+  &:checked {
+    border: 2px solid $main-color;
+  }
+}
+
+.modal__item input:checked + .modal__label {
+  font-color: red;
+}
+
+.modal__add {
+  margin-top: 33px;
+  background-color: $main-color;
+  color: $main-bg-color;
+  border: 2px solid transparent;
+}

@@ -1,0 +1,212 @@
+/*--MOBILE--*/
+
+.form-order__item {
+  //display: block;
+  margin-bottom: 35px;
+  position: relative;
+  padding-left: 0;
+  border: none;
+  border-top: 1px solid $main-color;
+}
+
+.form-order__title {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: inline-block;
+  width: 64px;
+  margin-bottom: 30px;
+  padding-left: 0;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background-color: $main-bg-color;
+  color: $main-color;
+}
+
+.form-order__text--title {
+  margin-bottom: 6px;
+}
+
+.form-order__inner {
+  margin-top: 34px;
+}
+
+.form-order__item:nth-child(3) {
+  margin-bottom: 31px;
+}
+
+.form-order__item:nth-child(2) .form-order__inner {
+  margin-top: 32px;
+}
+
+
+.form-order__radio input,
+.form-order__checkbox input {
+  display: none;
+}
+
+.form-order__inner--field {
+  margin-bottom: 18px;
+}
+
+.form-order__radio--label,
+.form-order__checkbox--label {
+  display: inline-block;
+  position: relative;
+  width: 160px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 60px;
+  font-family: $font-open-sans-bold;
+  font-size: 17px;
+  line-height: 18px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.form-order:first-child .form-order__radio--label {
+  margin-bottom: -15px;
+}
+
+.form-order input[radio] + label::before,
+.form-order input[checkbox] + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: -60px;
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  border: 2px solid $secondary-text-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-order input[checkbox] + label::before {
+  border-radius: 0%;
+}
+
+.form-order input[radio]:checked + label::before {
+  background: $main-color;
+  box-shadow: 0 0 0 10px $main-bg-color inset;
+}
+
+.form-order input[checkbox]:checked + label::after {
+  position: absolute;
+  content: "";
+  top: -4px;
+  left: -45px;
+  width: 8px;
+  height: 20px;
+  border-right: 2px solid $main-text-color;
+  border-bottom: 2px solid $main-text-color;
+  transform: rotate(45deg);
+}
+
+.form-order__text {
+  width: 100%;
+  padding: 12px 0 13px;
+  font-family: $font-open-sans;
+  font-size: 17px;
+  border: none;
+  border-bottom: 2px solid $main-text-color;
+  outline: none;
+
+  &:hover {
+    border-bottom: 2px solid $main-color;
+  }
+
+  &:checked {
+    border-bottom: 2px solid $main-color;
+  }
+
+  &:invalid {
+    border-bottom: 2px solid #f0b1b1;
+  }
+}
+
+.form-order input[type="radio"]:checked + .form-order__radio--label::before {
+  border: $border-color;
+  background-color: aqua;
+}
+
+.form-order input[type="checkbox"]:checked + .form-order__checkbox--label::before {
+   background: url("../img/icon-yes-red.svg") no-repeat center; }
+
+
+.form-order input[type="checkbox"]:checked:disabled + label::after {
+  border-right: 3px solid $disable-color;
+  border-bottom: 3px solid $disable-color;
+}
+
+.form-order__text input {
+  border: none;
+}
+
+.form-order__text input::-mozz-placeholder {
+  font-family: $font-open-sans;
+  font-size: 17px;
+  color: $placeholder-text-color;
+}
+
+.form-order__text input::-webkit-input-placeholder {
+  font-family: $font-open-sans;
+  font-size: 17px;
+  color: $placeholder-text-color;
+}
+
+.form-order__text--tel input {
+  margin-bottom: 18px;
+  padding: 22px 0 14px;
+  background: url(/img/icon-phone.svg) no-repeat 97% 50%;
+}
+
+.form-order__text--email input{
+  margin-bottom: 12px;
+  padding: 22px 0 13px;
+  background: url(/img/icon-mail.svg) no-repeat 98% 50%;
+}
+
+.form-order__message {
+  margin-top: 33px;
+  width: 95%;
+  min-height: 125px;
+  padding: 14px 0 0 15px;
+  line-height: 18px;
+  outline: none;
+  border: 2px solid $main-text-color;
+
+  &:hover {
+    border: 2px solid $main-color;
+  }
+
+  &:active {
+    border: 2px solid $main-color;
+  }
+
+  &:invalid {
+    border-bottom: 2px solid #f0b1b1;
+  }
+}
+
+.form-order__message textarea::-mozz-placeholder {
+  font-family: $font-open-sans;
+  font-size: 17px;
+  color: $placeholder-text-color;
+}
+
+.form-order__message textarea::-webkit-input-placeholder {
+  font-family: $font-open-sans;
+  font-size: 17px;
+  color: $placeholder-text-color;
+}
+
+.form-order__note {
+  margin-top: -38px;
+  margin-bottom: 20px;
+  font-family: $font-open-sans;
+  font-size: 14px;
+  text-align: center;
+  color: $secondary-text-color;
+}

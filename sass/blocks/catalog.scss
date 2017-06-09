@@ -1,0 +1,13 @@
+/*--MOBILE--*/
+
+.catalog {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  font-family: $font-open-sans;
+  font-size: 13px;
+  text-align: left;
+  color: $secondary-text-color;
+}
