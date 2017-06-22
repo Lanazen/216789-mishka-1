@@ -1,7 +1,9 @@
 /*--MOBILE--*/
 
 .about-us {
-  margin: 35px 30px;
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 35px;
   font-family: $font-open-sans-bold;
   color: $main-text-color;
 }
@@ -15,6 +17,8 @@
 .about-us__list {
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-us__item {
@@ -31,7 +35,7 @@
     background: url("../../img/icon-feature-3.svg") no-repeat 0% 19%;
   }
 
-  &--like {
+  &--likes {
     background: url("../../img/icon-feature-5.svg") no-repeat 0% 22%;
   }
 
@@ -45,5 +49,49 @@
 
   &--gift {
     background: url("../../img/icon-feature-6.svg") no-repeat 0% 20%;
+  }
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .about-us {
+    margin: 50px 50px;
+  }
+
+  .about-us__title {
+    width: 668px;
+    font-size: 43px;
+    line-height: 43px;
+  }
+
+  .about-us__list {
+    flex-wrap: wrap;
+    height: 476px;
+  }
+
+  .about-us__item {
+    font-size: 20px;
+    line-height: 22px;
+    width: 300px;
+    margin-top: 17px;
+    margin-bottom: 9px;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .about-us {
+    margin: 85px 275px 55px;
+  }
+
+  .about-us__title {
+    font-size: 53px;
+    line-height: 53px;
+  }
+
+  .about-us__item {
+    margin-right: 50px;
   }
 }

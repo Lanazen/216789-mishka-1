@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,8 +14,8 @@
       <a class="page-header__logo" href="index.html">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
       </a>
-      <nav class="main-nav  main-nav--closed">
-        <span class="main-nav__toggle"></span>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <button class="main-nav__toggle" type="button"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -24,18 +25,26 @@
               <a class="main-nav__item--link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="main-nav__item  main-nav__icon">
-              <a class="main-nav__icon--search" href="#"></a>
+              <!--<a class="main-nav__icon--search" href="#"></a>-->
               <a class="main-nav__item--search" href="#">Поиск по сайту</a>
             </li>
             <li class="main-nav__item  main-nav__icon">
-              <a class="main-nav__icon--cart"href="#"></a>
+              <!--<a class="main-nav__icon--cart" href="#"></a>-->
               <a class="main-nav__item--cart" href="#">Корзина: пока пуста</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--desktop">
+              <a class="main-nav__item--link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--desktop">
+              <a class="main-nav__item--link" href="#">Распродажа</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--tablet">Бесплатная доставка по России
             </li>
           </ul>
         </div>
       </nav>
       <div class="intro  intro--index">
-        <h1 class="intro__header  intro__header--index">Милые штуки ручной работы для дома</h1>
+        <h1 class="intro__header  intro__header--index">Милые штуки ручной работы&#160;для дома</h1>
       </div>
       <ul class="category">
         <li class="category__item  category__item--interior">
@@ -51,32 +60,30 @@
 
     <main class="page-main">
       <section class="product">
-        <div class="product__wrapper">
+        <div class="product__inner">
           <h2 class="product__title">Вязаные корзинки</h2>
           <span class="product__subtitle">Товар недели</span>
-          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="product__features">
-            <tr>
-              <td class="product__attribute">Цвет:</td>
-              <td class="product__value">«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <td class="product__attribute">Диаметр:</td>
-              <td class="product__value">25 см</td>
-            </tr>
-            <tr>
-              <td class="product__attribute">Высота:</td>
-              <td class="product__value">15 см</td>
-            </tr>
-          </table>
         </div>
+        <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="product__features">
+          <tr>
+            <td class="product__attribute">Цвет:</td>
+            <td class="product__value">«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <td class="product__attribute">Диаметр:</td>
+            <td class="product__value">25 см</td>
+          </tr>
+          <tr>
+            <td class="product__attribute">Высота:</td>
+            <td class="product__value">15 см</td>
+          </tr>
+        </table>
         <div class="product__image">
           <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Товар недели">
         </div>
-        <div class="product__inner">
-          <p class="product__price">Цена: 990 руб.</p>
-          <a class="btn  product__order" href="#">Заказать</a>
-        </div>
+        <p class="product__price">Цена: 990 руб.</p>
+        <a class="btn  product__order  modal-cart" href="#">Заказать</a>
       </section>
 
       <!--ABOUT US-->
@@ -84,12 +91,12 @@
       <section class="about-us">
         <h2 class="about-us__title">Коротко о нас:</h2>
         <ul class="about-us__list">
-          <li class="about-us__item  about-us__item--clean">Экологически чистые материалы</li>
-          <li class="about-us__item  about-us__item--style">Скандинавский стиль по российской цене</li>
-          <li class="about-us__item  about-us__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item  about-us__item--love">Связано вручную с любовью и умилением</li>
+          <li class="about-us__item  about-us__item--clean">Экологически чистые&#160;материалы</li>
+          <li class="about-us__item  about-us__item--style">Скандинавский стиль по&#160;российской цене</li>
+          <li class="about-us__item  about-us__item--likes">Увеличивает лайки на&#160;фотографиях</li>
+          <li class="about-us__item  about-us__item--love">Связано вручную с любовью&#160;и умилением</li>
           <li class="about-us__item  about-us__item--support">Поддержка отечественного производителя</li>
-          <li class="about-us__item  about-us__item--gift">Поставляется в подарочной упаковке</li>
+          <li class="about-us__item  about-us__item--gift">Поставляется в подарочной&#160;упаковке</li>
         </ul>
       </section>
 
@@ -98,7 +105,7 @@
       <section class="reviews">
         <h2 class="reviews__title">Отзывы</h2>
         <blockquote class="reviews__item">
-          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&#160;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <cite class="reviews__author">Анастасия Красильникова</cite>
           <span class="reviews__nick">@misssssiskras</span>
         </blockquote>
@@ -110,27 +117,33 @@
       <!--CONTACTS-->
 
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <span class="contacts__type">e-mail:</span>
-            <a class="contacts__address  contacts__address--mail" href="e-mail:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </li>
-          <li class="contacts__item">
-            <span class="contacts__type">адрес:</span>
-            <span class="contacts__address  contacts__address--city">г. Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101</span>
-          </li>
-        </ul>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <span class="contacts__type">e-mail:</span>
+              <a class="contacts__address  contacts__address--mail" href="e-mail:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__type">адрес:</span>
+              <span class="contacts__address  contacts__address--city">г. Санкт-Петербург, ул.&#160;Большая Конюшенная, д.19/8, офис 101</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map">
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651663!2d30.320894616477112!3d59.938794181876204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xfbeb3cbd3eed50c8!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCAxMDEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1497969054655" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <!--<img src="img/map-mobile@1x.jpg" width="320" height="455" alt="Где мы находимся">-->
+        </div>
+        <a class="contacts__write btn" href="#">Напишите нам</a>
       </section>
-      <div class="contacts__map">
-        <img src="img/map-mobile@1x.jpg" width="320" height="455" alt="Где мы находимся">
-      </div>
-      <a class="contacts__write btn" href="#">Напишите нам</a>
     </main>
 
     <!--FOOTER-->
 
     <footer class="page-footer">
+      <div class="page-footer__logo">
+          <img src="/img/logo-mobile.svg" width="100" height="38" alt="Логотип MISHKA">
+      </div>
       <div class="social">
         <a class="social__link social__link--in" href="#"></a>
         <a class="social__link social__link--fb" href="#"></a>
@@ -138,34 +151,73 @@
       </div>
       <div class="page-footer__copyright">
         <span class="page-footer__text">Разработано</span>
-        <a class="page-footer__link" href="#">
-          <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <!--<img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">-->
         </a>
       </div>
     </footer>
 
     <!--MODAL-->
 
-    <section class="modal  modal--hidden">
-      <form class="modal__order" action="https://echo.htmlacademy.ru" method="post">
-        <b class="modal__title">Добавить в корзину</b>
-        <fieldset class="modal__list">
-          <legend class="modal__select">Выберите размер:</legend>
-          <div class="modal__item">
-            <input type="radio" name="size-field" id="size-s" value="s" checked>
+    <section class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <form class="modal__order" action="https://echo.htmlacademy.ru" method="post">
+        <!--<fieldset class="modal__list">-->
+          <span class="modal__select">Выберите размер:</span>
+          <div class="modal__inner">
+            <input type="radio" name="size-field" id="size-s" value="S" checked>
             <label class="modal__label  modal__label--selected" for="size-s">S</label>
-          </div>
-          <div class="modal__item">
+          <!--</div>
+          <div class="modal__item">-->
             <input type="radio" name="size-field" id="size-m" value="m">
             <label class="modal__label" for="size-m">M</label>
-          </div>
-          <div class="modal__item">
+          <!--</div>
+          <div class="modal__item">-->
             <input type="radio" name="size-field" id="size-l" value="l">
             <label class="modal__label" for="size-l">L</label>
           </div>
           <button class="btn  modal__add" type="submit">Добавить</button>
-        </fieldset>
-      </form>
+        <!--</fieldset>-->
+        </form>
+      </div>
     </section>
+    <div class="overlay"></div>
+
+    <!--SCRIPT-->
+
+    <script>
+      var modal = document.querySelector(".modal");
+      var overlay = document.querySelector(".overlay");
+      var link = document.querySelector(".modal-cart");
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        overlay.classList.add("overlay--show");
+        modal.classList.add("modal--show");
+      });
+      window.addEventListener("keydown", function (event) {
+        if (event.keyCode === 27) {
+          if (modal.classList.contains("modal--show")) {
+            modal.classList.remove("modal--show");
+            overlay.classList.remove("overlay--show");
+          }
+        }
+      });
+    </script>
+
+    <script>
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
+      navMain.classList.remove("main-nav--nojs");
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+    </script>
   </body>
 </html>
