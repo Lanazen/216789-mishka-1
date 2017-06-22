@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,21 +14,31 @@
       <a class="page-header__logo" href="index.html">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
       </a>
-      <nav class="main-nav  main-nav--open">
-        <span class="main-nav__toggle"></span>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <button class="main-nav__toggle" type="button"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+              <a class="main-nav__item--link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+              <a class="main-nav__item--link" href="form.html">Вязание на заказ</a>
             </li>
-            <li class="main-nav__item  main-nav__item--search">
-              <a class="main-nav__link" href="#">Поиск по сайту</a>
+            <li class="main-nav__item  main-nav__icon">
+              <!--<a class="main-nav__icon--search" href="#"></a>-->
+              <a class="main-nav__item--search" href="#">Поиск по сайту</a>
             </li>
-            <li class="main-nav__item  main-nav__item--cart">
-              <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+            <li class="main-nav__item  main-nav__icon">
+              <!--<a class="main-nav__icon--cart" href="#"></a>-->
+              <a class="main-nav__item--cart" href="#">Корзина: пока пуста</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--desktop">
+              <a class="main-nav__item--link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--desktop">
+              <a class="main-nav__item--link" href="#">Распродажа</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--tablet">Бесплатная доставка по России
             </li>
           </ul>
         </div>
@@ -52,7 +63,7 @@
             <p class="catalog-item__info">Рост 30 см, вес 200 г</p>
             <div class="catalog-item__inner">
               <span class="catalog-item__price">1 200 руб.</span>
-              <a class="catalog-item__cart" href="#"></a>
+              <a class="catalog-item__cart  modal-cart" href="#"></a>
             </div>
           </div>
         </article>
@@ -67,7 +78,7 @@
             <p class="catalog-item__info">Диаметр 15 см, высота 10 см</p>
             <div class="catalog-item__inner">
               <span class="catalog-item__price">690 руб.</span>
-              <a class="catalog-item__cart" href="#"></a>
+              <a class="catalog-item__cart  modal-cart" href="#"></a>
             </div>
           </div>
         </article>
@@ -77,12 +88,12 @@
           </a>
           <div class="catalog-item__wrapper">
             <h3 class="catalog-item__title">
-              <a href="#">Большая корзинка для игрушек</a>
+              <a href="#">Большая корзинка для&#160;игрушек</a>
             </h3>
             <p class="catalog-item__info">Диаметр 30 см, высота 30 см</p>
             <div class="catalog-item__inner">
               <span class="catalog-item__price">1 500 руб.</span>
-              <a class="catalog-item__cart" href="#"></a>
+              <a class="catalog-item__cart  modal-cart" href="#"></a>
             </div>
           </div>
         </article>
@@ -92,16 +103,16 @@
 
       <section class="production">
         <div class="production__wrapper">
-          <h3 class="production__title">Процесс производства</h3>
           <div class="production__icon"></div>
-          <div class="production__video">
-            <video preload="metadata" width="260" height="150" poster="img/video-mobile@1x.jpg"></video>
-            <button class="production__play" type="button" title="Смотреть видео"></button>
-          </div>
-          <div class="production__inner">
-            <p class="production__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="btn  production__order" href="#">Сделать заказ</a>
-          </div>
+          <h3 class="production__title">Процесс производства</h3>
+        </div>
+        <div class="production__video">
+          <video preload="metadata" width="260" height="150" poster="img/video-mobile@1x.jpg"></video>
+          <button class="production__play" type="button" title="Смотреть видео"></button>
+        </div>
+        <div class="production__inner">
+          <p class="production__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="btn  production__order" href="#">Сделать заказ</a>
         </div>
       </section>
     </main>
@@ -109,6 +120,9 @@
     <!--FOOTER-->
 
     <footer class="page-footer">
+      <div class="page-footer__logo">
+          <img src="/img/logo-mobile.svg" width="100" height="38" alt="Логотип MISHKA">
+      </div>
       <div class="social">
         <a class="social__link social__link--in" href="#"></a>
         <a class="social__link social__link--fb" href="#"></a>
@@ -116,28 +130,67 @@
       </div>
       <div class="page-footer__copyright">
         <span class="page-footer__text">Разработано</span>
-        <a class="page-footer__link" href="#">
-          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <!--<img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">-->
         </a>
       </div>
     </footer>
 
     <!--MODAL-->
 
-    <section class="modal  modal--hidden">
-      <form class="modal__order" action="https://echo.htmlacademy.ru" method="post">
-        <b class="modal__title">Добавить в корзину</b>
-        <fieldset class="modal__list">
-          <legend class="modal__select">Выберите размер:</legend>
-          <input type="radio" name="size-field" id="size-s" value="s" checked>
-          <label class="modal__label  modal__label--selected" for="size-s">S</label>
-          <input type="radio" name="size-field" id="size-m" value="m">
-          <label class="modal__label" for="size-m">M</label>
-          <input type="radio" name="size-field" id="size-l" value="l">
-          <label class="modal__label" for="size-l">L</label>
+    <section class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <form class="modal__order" action="https://echo.htmlacademy.ru" method="post">
+          <span class="modal__select">Выберите размер:</span>
+          <div class="modal__inner">
+            <input type="radio" name="size-field" id="size-s" value="S" checked>
+            <label class="modal__label  modal__label--selected" for="size-s">S</label>
+            <input type="radio" name="size-field" id="size-m" value="m">
+            <label class="modal__label" for="size-m">M</label>
+            <input type="radio" name="size-field" id="size-l" value="l">
+            <label class="modal__label" for="size-l">L</label>
+          </div>
           <button class="btn  modal__add" type="submit">Добавить</button>
-        </fieldset>
-      </form>
+        </form>
+      </div>
     </section>
+    <div class="overlay"></div>
+
+    <!--SCRIPT-->
+
+    <script>
+      var modal = document.querySelector(".modal");
+      var overlay = document.querySelector(".overlay");
+      var link = document.querySelector(".modal-cart");
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        overlay.classList.add("overlay--show");
+        modal.classList.add("modal--show");
+      });
+      window.addEventListener("keydown", function (event) {
+        if (event.keyCode === 27) {
+          if (modal.classList.contains("modal--show")) {
+            modal.classList.remove("modal--show");
+            overlay.classList.remove("overlay--show");
+          }
+        }
+      });
+    </script>
+
+    <script>
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
+      navMain.classList.remove("main-nav--nojs");
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+    </script>
   </body>
 </html>

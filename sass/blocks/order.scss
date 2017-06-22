@@ -1,17 +1,48 @@
 /*--MOBILE--*/
 
 .order {
-  margin: 25px 30px 55px;
+  width: 260px;
+  margin: 28px auto 55px;
   font-family: $font-open-sans-bold;
-  text-align: left;
   color: $main-text-color;
+
 }
 
 .order__description {
-  margin-top: 0px;
-  margin-bottom: 28px;
+  width: 260px;
+  margin: 0 auto 15px;
   font-family: $font-open-sans;
   font-size: 13px;
   line-height: 24px;
   color: $secondary-text-color;
+  //color: #767676;
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .order {
+    padding: 55px 0 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .order__description {
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0 50px;
+    width: 620px;
+    color: #767676;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .order__description {
+    width: 680px;
+    margin-left: 225px;
+    margin-top: 50px;
+  }
 }

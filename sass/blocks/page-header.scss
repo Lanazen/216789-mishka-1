@@ -2,15 +2,13 @@
 
 .page-header {
   min-width: 320px;
-  min-height: 79px;
+  margin: 0 auto;
   font-family: $font-open-sans-bold;
-  text-align: center;
   background-color: $main-bg-color;
 }
 
 .page-header__logo {
   display: block;
-  min-height: 35px;
   padding: 20px;
   text-align: center;
   border-top: 1px solid $border-color;
@@ -25,6 +23,36 @@
   }
 }
 
-  /*.page-header__logo img {
-    padding: 0;
-  }*/
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .page-header {
+    //@include clearfix;
+    //margin: 0 50px;
+  }
+
+  .page-header__logo {
+    border: none;
+    margin-left: 50px;
+    padding-left: 0;
+    padding-top: 25px;
+    padding-bottom: 16px;
+    position: relative;
+    z-index: 8;
+    text-align: left;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: 1150px) {
+  .page-header {
+    width: 1150px;
+  }
+
+  .page-header__logo {
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+  }
+}

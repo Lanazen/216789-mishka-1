@@ -1,15 +1,16 @@
 /*--MOBILE--*/
 
 .social {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 305px;
+  padding: 26px 0px;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .social__link {
-  display: inline-block;
   margin-right: 40px;
-  padding: 26px 0;
-  vertical-align: bottom;
 
   &--in {
     width: 22px;
@@ -28,5 +29,21 @@
     height: 21px;
     margin-right: 0;
     background: url(/img/icon-twitter.svg) no-repeat 50% 50%;
+  }
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .social {
+    border-bottom: none;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .social {
+    //margin: 0;
   }
 }

@@ -1,23 +1,33 @@
 /*--MOBILE--*/
 
 .category {
-  position: relative;
-  //width: 100%;
   margin: 0;
   padding: 0;
-  list-style: none;
-  font-size: 0;
+  max-width: 400px;
 }
 
 .category__item {
-  position: absolute;
-  width: 100%;
-  text-align: left;
+  position: relative;
+  list-style: none;
+  min-height: 102px;
+  width: 320px;
+  margin: 0 auto;
+}
 
-  &--interior {
-    bottom: 76px;
-    left: 0;
-    background: $main-color  url(/img/icon-interior.svg) no-repeat 86.5% 50%;
+.category__item--interior {
+    background: $main-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 41px;
+        height: 62px;
+        top: 23px;
+        right: 36px;
+        background: url("../img/icon-interior.svg") no-repeat center;
+        opacity: 0.3;
+        cursor: pointer;
+      }
 
     &:hover {
       padding-bottom: 5px;
@@ -26,30 +36,44 @@
     &:active {
       padding-bottom: 0px;
     }
-  }
+}
 
-  &--toys {
-    bottom: -26px;
-    left: 0;
-    background: $secondary-color url(/img/icon-toy.svg) no-repeat 89.5% 50%;
+.category__item--toys {
+    background: $secondary-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 61px;
+      height: 61px;
+      top: 18px;
+      right: 27px;
+      background: url("../img/icon-toy.svg") no-repeat center;
+      opacity: 0.3;
+      cursor: pointer;
+    }
 
     &:hover {
-      padding-bottom: 5px;
+      background-color: #46c1ae;
+    }
+
+    &:hover {
+      padding-top: 5px;
     }
 
     &:active {
-      padding-bottom: 0px;
+      padding-top: 0px;
     }
-  }
 }
 
 .category__link {
-  display: block;
-  width: 110px;
+  display: flex;
+  align-items: center;
+  height: 102px;
   margin: 0;
-  padding: 26px;
   padding-left: 30px;
-  padding-right: 57.8%;
+  padding-right: 200px;
+
   font-size: 19px;
   line-height: 25px;
   text-decoration: none;
@@ -58,4 +82,38 @@
   &:active {
       color: rgba(255, 255, 255, 0.4);
     }
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .category {
+    display: flex;
+    margin: -108px 50px 0;
+  }
+
+  .category__item {
+    flex-basis: 334px;
+    height: 108px;
+  }
+
+  .category__link {
+    height: 108px;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .category {
+    margin: -108px 100px 0;
+  }
+
+  .category__item {
+    min-width: 525px;
+  }
+
+  .category__link {
+    padding-right: 320px;
+  }
 }

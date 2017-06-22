@@ -3,12 +3,16 @@
 .intro {
   margin: 0;
   padding: 51px 30px 58px;
+  height: 178px;
+  box-sizing: border-box;
   background-color: $secondary-bg-color;
   color: $main-text-color;
 
   &--index {
-    min-height: 355px;
-    background: url(/img/hero-mobile@1x.jpg) no-repeat 50% -20%;
+    height: 283px;
+    background: #fff url(../img/hero-mobile@1x.jpg) 50% 20% no-repeat;
+    background-size: cove;
+    box-sizing: border-box;
   }
 }
 
@@ -16,4 +20,64 @@
   font-family: $font-open-sans-bold;
   font-size: 27px;
   line-height: 30px;
+  text-align: center;
+}
+
+.intro__header--index {
+  margin: 0 auto;
+  padding-top: 19px;
+  width: 250px;
+  text-align: center;
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .intro {
+    height: 215px;
+    margin-top: -80px;
+    border-top: 1px solid  $border-color;
+
+    &--index {
+      background-size: cover;
+      margin-top: -80px;
+      height: 745px;
+    }
+  }
+
+  .intro__header {
+    margin-top: 43px;
+    font-size: 43px;
+    line-height: 49px;
+
+    &--index {
+      margin-top: 101px;
+      width: 500px;
+    }
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .intro {
+    min-height: 242px;
+    text-align: center;
+
+    &--index {
+      min-height: 630px;
+      width: 100%;
+      background-size: cover;
+    }
+  }
+
+  .intro__header {
+    font-size: 53px;
+    line-height: 59px;
+  }
+
+  .intro__header--index {
+    margin-top: 80px;
+    width: 700px;
+  }
 }

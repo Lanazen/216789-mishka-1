@@ -9,6 +9,14 @@
 @mixin container() {
   width: 260px;
   margin: 0 auto;
+
+  @media ($tablet-widths) {
+    width: 668px;
+  }
+
+  @media ($desktop-widths) {
+    width: 1050px;
+  }
 }
 
 @mixin center() {

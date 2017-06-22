@@ -5,9 +5,34 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 30px;
   font-family: $font-open-sans;
   font-size: 13px;
   text-align: left;
   color: $secondary-text-color;
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .catalog {
+    width: 668px;
+    margin: 0 auto;
+    margin-top: 90px;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .catalog {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 142px;
+    width: 1050px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
 }
