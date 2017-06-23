@@ -12,7 +12,7 @@
 }
 
 .page-footer__logo {
-    display: none;
+  display: none;
 }
 
 .page-footer__copyright {
@@ -61,18 +61,5 @@
 
   .page-footer__copyright {
     padding: 0;
-  }
-}
-
-/*--DESKTOP--*/
-
-@media ($desktop-widths) {
-  .page-footer {
-    //min-width: 1050px;
-    //margin: 0 50px -22px;
-  }
-
-  .page-footer__link {
-    //margin-right: 100px;
   }
 }

@@ -1,45 +1,45 @@
 /*--MOBILE--*/
 
 .category {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  max-width: 400px;
 }
 
 .category__item {
+  display: block;
   position: relative;
-  list-style: none;
-  min-height: 102px;
   width: 320px;
+  min-height: 102px;
   margin: 0 auto;
+  list-style: none;
 }
 
 .category__item--interior {
-    background: $main-color;
+  background: $main-color;
 
-      &::after {
-        content: "";
-        position: absolute;
-        width: 41px;
-        height: 62px;
-        top: 23px;
-        right: 36px;
-        background: url("../img/icon-interior.svg") no-repeat center;
-        opacity: 0.3;
-        cursor: pointer;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 36px;
+      width: 41px;
+      height: 62px;
+      background: url("../img/icon-interior.svg") no-repeat center;
+      opacity: 0.3;
+      cursor: pointer;
+    }
 
     &:hover {
-      padding-bottom: 5px;
+      background-color: #59d5bc;
     }
 
     &:active {
-      padding-bottom: 0px;
+      color: #8be1d0;
     }
 }
 
 .category__item--toys {
-    background: $secondary-color;
+  background: $secondary-color;
 
     &::after {
       content: "";
@@ -57,12 +57,8 @@
       background-color: #46c1ae;
     }
 
-    &:hover {
-      padding-top: 5px;
-    }
-
     &:active {
-      padding-top: 0px;
+      color: #37b2a0;
     }
 }
 
@@ -73,14 +69,13 @@
   margin: 0;
   padding-left: 30px;
   padding-right: 200px;
-
   font-size: 19px;
   line-height: 25px;
   text-decoration: none;
   color: $main-bg-color;
 
   &:active {
-      color: rgba(255, 255, 255, 0.4);
+      color: #8be1d0;
     }
 }
 
@@ -88,13 +83,27 @@
 
 @media ($tablet-widths) {
   .category {
+    @include container();
     display: flex;
-    margin: -108px 50px 0;
+    margin: -108px auto 0;
   }
 
   .category__item {
     flex-basis: 334px;
     height: 108px;
+
+    &:hover {
+      transform: translateY(-5px);
+      padding-bottom: 5px;
+      margin-bottom: -5px;
+    }
+
+    &:active {
+      transform: translateY(0);
+      padding-bottom: 0px;
+      margin-bottom: 0;
+      color: #8be1d0;
+    }
   }
 
   .category__link {
@@ -106,7 +115,7 @@
 
 @media ($desktop-widths) {
   .category {
-    margin: -108px 100px 0;
+    margin: -108px auto 0;
   }
 
   .category__item {
@@ -115,5 +124,7 @@
 
   .category__link {
     padding-right: 320px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

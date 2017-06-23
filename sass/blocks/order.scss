@@ -14,26 +14,24 @@
   font-family: $font-open-sans;
   font-size: 13px;
   line-height: 24px;
-  color: $secondary-text-color;
-  //color: #767676;
+  color: #767676;
 }
 
 /*--TABLET--*/
 
 @media ($tablet-widths) {
   .order {
-    padding: 55px 0 0;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    padding: 55px 0 0;
   }
 
   .order__description {
-    font-size: 17px;
-    line-height: 30px;
     margin: 0 50px;
     width: 620px;
-    color: #767676;
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 

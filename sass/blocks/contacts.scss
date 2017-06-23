@@ -49,6 +49,7 @@
 }
 
 .contacts__address--mail {
+  width: 180px;
   border-bottom: 1px solid $main-color;
 
   &:hover {
@@ -99,7 +100,7 @@
       content: "";
       position: absolute;
       display: block;
-      top: 0;
+      top: -10px;
       right: 0;
       width: 47px;
       height: 81px;
@@ -129,7 +130,7 @@
   }
 
   .contacts__address--mail {
-    width: 192px;
+    width: 205px;
     height: 29px;
   }
 
@@ -157,21 +158,25 @@
 
 @media ($desktop-widths) {
   .contacts {
+    @include container();
     flex-direction: row;
     flex-wrap: wrap;
     padding-bottom: 0;
     position: relative;
-    margin: 45px 50px 50px 120px;
+    margin-bottom: 50px;
+    margin-top: 45px;
   }
 
   .contacts__wrapper {
     margin-bottom: 0;
+    margin-left: 175px;
   }
 
   .contacts__title {
     font-size: 53px;
     margin-top: 30px;
     margin-bottom: 42px;
+    margin-left: -3px;
 
     &::before {
       top: 0;
@@ -181,7 +186,6 @@
 
   .contacts__list {
     flex-direction: column;
-    margin-right: auto;
     width: 280px;
   }
 
@@ -194,17 +198,16 @@
   }
 
   .contacts__map {
-    //@include clearfix();
     position: absolute;
     width: 525px;
     height: 457px;
     top: 26px;
-    right: -25px;
+    right: 0px;
   }
 
   .contacts__write {
     align-self: flex-end;
-    margin-left: 155px;
+    margin-left: 175px;
     margin-top: 15px;
   }
 }

@@ -27,8 +27,8 @@
 
 @media ($tablet-widths) {
   .page-header {
-    //@include clearfix;
-    //margin: 0 50px;
+    width: 768px;
+    margin: 0 auto;
   }
 
   .page-header__logo {
@@ -48,11 +48,12 @@
 @media (min-width: 1150px) {
   .page-header {
     width: 1150px;
+    margin: 0 auto;
   }
 
   .page-header__logo {
+    width: 150px;
     margin: 0 auto;
     text-align: center;
-    width: 150px;
   }
 }
