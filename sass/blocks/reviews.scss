@@ -1,11 +1,25 @@
 /*--MOBILE--*/
 
 .reviews {
+  position: relative;
   width: 260px;
   margin: 45px auto 23px;
   font-family: $font-open-sans;
   font-size: 0;
   color: $secondary-text-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("../img/bg-zigzag-line.svg") repeat-x 0px;
+    background-size: 100% 8px;
+    min-width: 360px;
+    height: 6px;
+    bottom: -55px;
+    left: -50px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .reviews__title {
@@ -81,13 +95,29 @@
 
 @media ($tablet-widths) {
   .reviews {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    position: relative;
     width: 768px;
     margin: 0 auto;
-    background: url(/img/review@1x.jpg) no-repeat 0% 0%;
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
+
+    &::after {
+      background: url("../img/bg-zigzag-line.svg") repeat-x 39px;
+      background-size: 100% 23px;
+      height: 15px;
+      bottom: -60px;
+      right: 10px;
+      min-width: 768px;
+    }
+
+    @media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background: url("../img/review@2x.jpg") no-repeat 0 0;
+      background-size: 350px 457px;
+    }
   }
 
   .reviews__title {
@@ -148,7 +178,17 @@
 @media ($desktop-widths) {
   .reviews {
     @include container();
-    margin-bottom: 132px;
+    margin-bottom: 108px;
+    padding-bottom: 20px;
+
+    &::after {
+      background: url("../img/bg-zigzag-line.svg") repeat-x 39px;
+      background-size: 100% 25px;
+      height: 25px;
+      bottom: -90px;
+      left: 0px;
+      width: 1050px;
+    }
   }
 
   .reviews__title {

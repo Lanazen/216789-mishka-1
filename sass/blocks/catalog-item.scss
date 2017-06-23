@@ -23,6 +23,8 @@
 
 .catalog-item__image img {
   display: block;
+  height: auto;
+  width: 100%;
 }
 
 .catalog-item__wrapper {
@@ -113,8 +115,9 @@
     border: none;
   }
 
-  .catalog-item__image {
-    width: 334px;
+  .catalog-item__image  img {
+    flex-basis: 334px;
+    height: 334px;
   }
 
   .catalog-item__title a{
@@ -151,9 +154,9 @@
     margin-right: 0;
   }
 
-  .catalog-item__image {
+  .catalog-item__image img {
+    height: 462px;
     width: 315px;
-    height: 463px;
   }
 
   .catalog-item__info {
