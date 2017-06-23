@@ -20,21 +20,20 @@
 }
 
 .modal__wrapper {
-  //.container();
-  padding-top: 30px;
   width: 260px;
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 .modal__title {
-  font-family: $font-open-sans-bold;
-  font-size: 25px;
-  line-height: 30px;
-  text-transform: uppercase;
   margin: 0;
   margin-bottom: 13px;
   padding-left: 50px;
   padding-right: 50px;
+  font-family: $font-open-sans-bold;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .modal__order {
