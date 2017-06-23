@@ -176,16 +176,16 @@
     padding-left: 175px;
     margin-bottom: 157px;
     box-sizing: border-box;
+  }
 
-    &::after {
-      background: url("../img/bg-zigzag-line.svg") repeat-x 26px;
-      background-size: 100% 23px;
-      width : 1050px;
-      left: 0px;
-      height: 30px;
-      bottom: -97px;
- }
-}
+  .product::after {
+    background: url("../img/bg-zigzag-line.svg") repeat-x 26px;
+    background-size: 100% 23px;
+    width : 1050px;
+    left: 0px;
+    height: 30px;
+    bottom: -97px;
+  }
 
   .product__title {
     min-width: 600px;
